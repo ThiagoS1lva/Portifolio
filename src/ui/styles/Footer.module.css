@@ -1,0 +1,52 @@
+.container {
+    display: flex;
+    min-height: 20vh;
+    background-color: #010409;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.nome {
+    display: flex;
+    margin-left: 10%;
+}
+.nome p {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #fff;
+}
+.icones {
+    display: flex;
+    margin-right: 10%;
+    flex-direction: column;
+    width: 13%;
+}
+.icon {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10%;
+    justify-content: space-between;
+}
+
+.icones p {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #fff;
+    display: flex;
+}
+.icon a {
+    color: #fff;
+    transition: all 200ms ease-in-out;
+}
+.icon a:nth-child(1):hover  {
+    color: #0275B4;
+}
+.icon a:nth-child(2):hover  {
+    color: #a3a3a3;
+}
+.icon a:nth-child(3):hover  {
+    color: #f620cf;
+}
+.icon a:nth-child(4):hover  {
+    color: #3faf48;
+}
