@@ -1,13 +1,16 @@
-import { useContext } from "react"
-import { Context } from "../contexts/Contexts"
+
 import HomeStart from "../ui/components/HomeStart"
+import SectionSkill from "../ui/components/SectionSkill"
+import SectionSobre from "../ui/components/SectionSobre"
+
 
 export default function Home() {
-    const { sectionHomeRef } = useContext(Context)
 
     return (
         <>
-            <HomeStart ref={sectionHomeRef} />
+            <HomeStart />
+            <SectionSobre />
+            <SectionSkill/>
         </>
 
     )

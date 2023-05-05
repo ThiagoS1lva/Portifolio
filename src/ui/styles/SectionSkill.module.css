@@ -1,0 +1,38 @@
+.dad {
+    width: 75%;
+    display: flex;
+    margin: 0 auto 0 auto;
+}
+.container {
+    width: 100%;
+    display: flex;
+    margin-top: 10%;
+    flex-direction: column;
+}
+.container h1 {
+    font-size: 2.4em;
+}
+.skill {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2vh;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+    padding: 8% 10%;
+    border-radius: 10px;
+}
+.hab {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 3%;
+    align-items: center;
+}
+.hab div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70%;
+}
+.hab p {
+    font-size: 1.8em;
+}
