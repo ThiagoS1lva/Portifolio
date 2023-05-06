@@ -82,4 +82,7 @@
     .nav1 {
         min-height: 10vh;
     }
+    .link, .link1 {
+        font-size: 1.6em;
+    }
 }
