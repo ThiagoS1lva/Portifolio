@@ -53,3 +53,17 @@
         font-size: 1.6em;
     }
 }
+@media (max-width:500px) {
+    .container h1 {
+        font-size: 1.8em;
+    }
+    .hab p {
+        font-size: 1em;
+    }
+    .dad {
+        width: 95%;
+    }
+    .skill {
+        padding: 8% 6%;
+    }
+}

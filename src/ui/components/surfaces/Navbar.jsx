@@ -30,7 +30,7 @@ export default function Navbar() {
         <nav className={isTransparent ? `${styles.nav}` : `${styles.nav1}`}>
             <div className={styles.container}>
                 <div>
-                    <p className={isTransparent ? `${styles.link}` : `${styles.link1}` }>Thiago Oliveira</p>
+                    <p className={isTransparent ? `${styles.link}` : `${styles.link1}` } onClick={() => buttonHome(sectionHomeRef)}>Thiago Oliveira</p>
                 </div>
                 <ul className={styles.menu}>
                     <li className={isTransparent ? `${styles.link}` : `${styles.link1}` } onClick={() => buttonHome(sectionHomeRef)}>{`<Página inicial/>`}</li>

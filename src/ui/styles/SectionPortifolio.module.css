@@ -134,3 +134,31 @@
         font-size: 1.4em;
     }
 }
+@media (max-width:500px) {
+    .dad {
+        width: 95%;
+    }
+    .projetos {
+        width: 95%;
+    }
+    .container h1 {
+        font-size: 1.8em;
+    }
+    .container p {
+        font-size: 1em;
+    }
+    .row {
+        flex-direction: column;
+        width: 100%;
+    }
+    .card {
+        width: 100%;
+        margin-bottom: 10%;
+    }
+    .text h2 {
+        font-size: 1.5em;
+    }
+    .text p {
+        font-size: 1.2em;
+    }
+}

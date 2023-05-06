@@ -40,5 +40,21 @@
     .text p{
         font-size: 1.6em;
     }
-    
+}
+@media (max-width:500px) {
+    .dad {
+        width: 95%;
+    }
+    .container {
+        margin-top: 10%;
+    }
+    .container h1 {
+        font-size: 1.8em;
+    }
+    .text p {
+        font-size: 1.4em;
+    }
+    .text span {
+        color: #0279b0;
+    }
 }

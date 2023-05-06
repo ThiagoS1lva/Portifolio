@@ -72,3 +72,14 @@
         font-size: 1em;
     }
 }
+@media (max-width:500px) {
+    .menu {
+        display: none;
+    }
+    .nav {
+        min-height: 10vh;
+    }
+    .nav1 {
+        min-height: 10vh;
+    }
+}

@@ -46,3 +46,20 @@
         margin-top: 20%;
     }
 }
+@media (max-width:500px) {
+    .container1 h1 {
+        font-size: 1.8em;
+    }
+    .container1 {
+        margin-top: 15%;
+    }
+    .container1 p {
+        font-size: 1.4em;
+    }
+    .container {
+        width: 86%;
+    }
+    .container1 span {
+        font-size: 1.6em;
+    }
+}

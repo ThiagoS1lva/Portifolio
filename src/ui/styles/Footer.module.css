@@ -51,3 +51,20 @@
 .icon a:nth-child(4):hover  {
     color: #3faf48;
 }
+
+@media (max-width:768px) {
+    .icones {
+        width: 20%;
+    }
+}
+@media (max-width:500px) {
+    .icones {
+        width: 40%;
+    }
+    .nome {
+        margin-left: 5%;
+    }
+    .icones {
+        margin-right: 5%;
+    }
+}
