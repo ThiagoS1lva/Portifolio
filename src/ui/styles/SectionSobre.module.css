@@ -23,3 +23,26 @@
     margin-bottom: 3%; 
     font-size: 1.8em;
 }
+
+@media (max-width:1024px) {
+    .container {
+        width: 80%;
+    }
+    .container1 {
+        margin-top: 16%;
+    }
+}
+@media (max-width:768px) {
+    .container1 h1 {
+        font-size: 2em;
+    }
+    .container1 p {
+        font-size: 1.6em;
+    }
+    .container1 span {
+        font-size: 1.8em;
+    }
+    .container1 {
+        margin-top: 20%;
+    }
+}

@@ -8,7 +8,7 @@ export default function SectionSobre() {
     return (
         <div className={styles.container} ref={sectionSobreRef}>
             <div className={styles.container1}>
-                <h1>{`<Um pouco sobre mim />`}</h1>
+                <h1>{`<Sobre mim />`}</h1>
                 <p>
                     Eu sou um graduando em Ciência da Computação na UERJ - Maracanã e estou me dedicando aos estudos para me tornar um programador web full stack.
                 </p>

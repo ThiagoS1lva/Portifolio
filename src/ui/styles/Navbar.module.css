@@ -54,3 +54,21 @@
 .link1:hover {
     box-shadow: 0px 4px  #fff;
 }
+
+@media (max-width:1024px) {
+    .menu {
+        width: 80%;
+    }
+    .link, .link1 {
+        font-size: 1.2em;
+    }
+    
+}
+@media (max-width:768px) {
+    .menu {
+        width: 95%;
+    }
+    .link, .link1{
+        font-size: 1em;
+    }
+}

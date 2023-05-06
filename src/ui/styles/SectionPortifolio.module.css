@@ -28,10 +28,11 @@
     margin-top: 2%;
 }
 
-.row1 {
+.row {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    margin-bottom: 2%;
 }
 
 .card {
@@ -87,6 +88,7 @@
     text-align: center;
     margin-top: 2%;
     gap: 10px;
+    align-items: center;
 }
 .language p {
     font-size: 1.2em;
@@ -94,4 +96,41 @@
     width: 90%;
     background-color: #ccc;
     border-radius: 10px;
+}
+
+@media (max-width:1024px) {
+    .dad {
+        width: 80%;
+    }
+    .container {
+        margin-top: 15%;
+    }
+    .language p {
+        font-size: 1em;
+        width: 95%;
+    }
+}
+@media (max-width:768px) {
+    .dad {
+        width: 90%;
+    }
+    .container {
+        margin-top: 16%;
+    }
+    .container h1{
+        font-size: 2em;
+    }
+    .container p{
+        font-size: 1.4em;
+    }
+    .language p {
+        font-size: 1em;
+        width: 95%;
+    }
+    .text p {
+        font-size: 1.1em;
+    }
+    .text h2 {
+        font-size: 1.4em;
+    }
 }

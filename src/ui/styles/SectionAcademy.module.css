@@ -1,0 +1,44 @@
+.dad {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: 0 auto;
+}
+.container {
+    display: flex;
+    width: 100%;
+    margin-top: 13%;
+    flex-direction: column;
+}
+.container h1 {
+    font-size: 2.4em;
+}
+.text {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+}
+.text p {
+    font-size: 1.8em;
+    margin-bottom: 2%;
+    margin-left: 1%;
+}
+.text span {
+    color: #0279b0;
+}
+
+@media(max-width:768px) {
+    .dad {
+        width: 90%;
+    }
+    .container {
+        margin-top: 18%;
+    }
+    .container h1 {
+        font-size: 2em;
+    }
+    .text p{
+        font-size: 1.6em;
+    }
+    
+}

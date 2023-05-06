@@ -36,3 +36,20 @@
 .hab p {
     font-size: 1.8em;
 }
+
+@media (max-width:1024px) {
+    .dad {
+        width: 80%;
+    }
+}
+@media (max-width:768px) {
+    .dad {
+        width: 90%;
+    }
+    .container h1{
+        font-size: 2em;
+    }
+    .hab p{
+        font-size: 1.6em;
+    }
+}
