@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import { Context } from "../../contexts/Contexts"
 
-import styles from '../styles/HomeStart.module.css'
+import styles from '../styles/SectionStart.module.css'
 import { BsFillStarFill } from 'react-icons/bs'
 
 import eu from '/eu.jpg'
