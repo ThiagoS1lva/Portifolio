@@ -39,7 +39,7 @@ export default function SectionPortifolio() {
                             <div className={styles.text}>
                                 <h2>Recicla.ai</h2>
                                 <a href='https://reclicla-ai.vercel.app/' target='blank'><img src='/recicla.jpeg' /></a>
-                                <p>O Recicla.ai, um MVP que cadastra de usuários e empresas, além de fornecer autenticação de login com verificação de banco de dados.</p>
+                                <p>O Recicla.ai, um MVP que cadastra usuários e empresas, além de fornecer autenticação de login com verificação no banco de dados.</p>
                             </div>
                             <div className={styles.language}>
                                 <p>React.js</p>
