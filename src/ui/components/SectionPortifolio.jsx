@@ -7,90 +7,102 @@ import { RiShareBoxLine } from "react-icons/ri"
 export default function SectionPortifolio() {
     const { sectionProjetoRef } = useContext(Context)
 
+    const projetos = [
+        {
+            title: "Kscalho",
+            description: "App de finanças pessoais com assistente de IA (Kscalinho). Gerenciamento de receitas, despesas e metas com gráficos interativos e planos premium via Stripe.",
+            image: "/Kascalho.png",
+            github: "",
+            live: "https://kascalho.vercel.app",
+            techs: ["Vue 3", "Supabase", "Gemini AI", "Stripe", "PWA"]
+        },
+        {
+            title: "Tarotly",
+            description: "Monorepo com app de leitura de tarot com IA e blog SEO-friendly. Interpretações geradas por IA, pagamentos, notificações push e internacionalização.",
+            image: "/tarotly.png",
+            github: "",
+            live: "http://tarotly.site/",
+            techs: ["Vue 3", "Astro", "Groq AI", "Stripe", "PWA"]
+        },
+        {
+            title: "Pont Uau",
+            description: "Sistema de agendamentos mobile-first com confirmações por e-mail, integração Google Maps e dashboard com métricas via gráficos interativos.",
+            image: "/Pontuau.png",
+            github: "",
+            live: "https://pont-uau.vercel.app/",
+            techs: ["Nuxt 3", "Supabase", "Tailwind", "Chart.js"]
+        },
+        {
+            title: "Pokédex",
+            description: "Uma Pokédex interativa desenvolvida com Next.js que consome a PokeAPI para exibir informações detalhadas de Pokémon.",
+            image: "/pokedex.jpeg",
+            github: "https://github.com/ThiagoS1lva/pokedex",
+            live: "https://pokedex-pi-sable.vercel.app/",
+            techs: ["JavaScript", "Next.js", "PokeAPI"]
+        },
+        {
+            title: "Recicla.ai",
+            description: "MVP completo com sistema de cadastro e autenticação de usuários e empresas, conectando ao banco de dados.",
+            image: "/recicla.jpeg",
+            github: "",
+            live: null,
+            techs: ["React.js", "Express", "Node.js", "SQLite"]
+        },
+        {
+            title: "WordCloud Twitter",
+            description: "Análise de dados do Twitter utilizando Python para gerar nuvens de palavras a partir de trends e hashtags.",
+            image: "/Cloud.png",
+            github: "https://github.com/ThiagoS1lva/wordCloud-TwitterAPI/tree/main",
+            live: null,
+            techs: ["Python", "Tweepy", "Pandas", "WordCloud"]
+        }
+    ]
+
     return (
         <div ref={sectionProjetoRef} className={styles.dad}>
             <div className={styles.container}>
-                <h1>{`<Projetos />`}</h1>
-                <p>Uma pequena galeria dos meus projetos mais recentes.</p>
+                <h1 className="animate-on-scroll">{`<Projetos />`}</h1>
+                <p className="animate-on-scroll delay-1">Uma seleção dos meus projetos mais recentes</p>
+
                 <div className={styles.projetos}>
-                    <div className={styles.row}>
-                        <div className={styles.card}>
-                            <div className={styles.icon}>
-                                <a href='https://github.com/ThiagoS1lva/pokedex' target='blank'><BsGithub size={35} /></a>
-                                <a href='https://pokedex-pi-sable.vercel.app/' target='blank'><RiShareBoxLine size={35} /></a>
+                    {projetos.map((projeto, index) => (
+                        <div
+                            key={index}
+                            className={`${styles.card} animate-on-scroll delay-${Math.min(index + 2, 5)}`}
+                        >
+                            <div className={styles.cardImage}>
+                                <img
+                                    src={projeto.image}
+                                    alt={`Screenshot do projeto ${projeto.title}`}
+                                    loading="lazy"
+                                    decoding="async"
+                                />
                             </div>
-                            <div className={styles.text}>
-                                <h2>Pokedéx</h2>
-                                <a href='https://pokedex-pi-sable.vercel.app/' target='blank'><img src='/pokedex.jpeg' alt='imagens de pokemons' /></a>
-                                <p>Este é um projeto desenvolvido com Next.js e a PokeAPI, uma API para informações de Pokémon.</p>
-                            </div>
-                            <div className={styles.language}>
-                                <p>Javascript</p>
-                                <p>Next.js</p>
-                                <p>Poke API</p>
-                            </div>
-                        </div>
-
-                        <div className={styles.card}>
-                            <div className={styles.icon}>
-                                <a href='' target='blank'><BsGithub size={35} /></a>
-                                <a href='https://reclicla-ai.vercel.app/' target='blank'><RiShareBoxLine size={35} /></a>
-                            </div>
-                            <div className={styles.text}>
-                                <h2>Recicla.ai</h2>
-                                <a href='https://reclicla-ai.vercel.app/' target='blank'><img src='/recicla.jpeg' /></a>
-                                <p>O Recicla.ai, um MVP que cadastra usuários e empresas, além de fornecer autenticação de login com verificação no banco de dados.</p>
-                            </div>
-                            <div className={styles.language}>
-                                <p>React.js</p>
-                                <p>Express</p>
-                                <p>Node.js</p>
-                                <p>SQlite</p>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div className={styles.row}>
-
-                        <div className={styles.card}>
-                            <div className={styles.icon}>
-                                <a href='https://github.com/ThiagoS1lva/random_game' target='blank'><BsGithub size={35} /></a>
-                                <a href='https://random-game-beta.vercel.app/' target='blank'><RiShareBoxLine size={35} /></a>
-                            </div>
-                            <div className={styles.text}>
-                                <h2>Random Game</h2>
-                                <a href='https://random-game-beta.vercel.app/' target='blank'><img src='/random.jpeg' alt='imagens do site de randomizador de jogos' /></a>
-                                <p>Este é um projeto simples que consiste em uma aplicação web que permite adicionar e remover jogos em uma lista e sortear aleatoriamente um deles.</p>
-                            </div>
-                            <div className={styles.language}>
-                                <p>Javascript</p>
-                                <p>React.js</p>
-                                <p>CSS Modules</p>
-                                <p>React Bootstrap</p>
+                            <div className={styles.cardContent}>
+                                <div className={styles.cardHeader}>
+                                    <h2>{projeto.title}</h2>
+                                    <div className={styles.cardIcons}>
+                                        {projeto.github && (
+                                            <a href={projeto.github} target="_blank" rel="noreferrer" aria-label={`GitHub do projeto ${projeto.title}`}>
+                                                <BsGithub size={20} />
+                                            </a>
+                                        )}
+                                        {projeto.live && (
+                                            <a href={projeto.live} target="_blank" rel="noreferrer" aria-label={`Ver projeto ${projeto.title} ao vivo`}>
+                                                <RiShareBoxLine size={20} />
+                                            </a>
+                                        )}
+                                    </div>
+                                </div>
+                                <p>{projeto.description}</p>
+                                <div className={styles.language}>
+                                    {projeto.techs.map((tech, techIndex) => (
+                                        <p key={techIndex}>{tech}</p>
+                                    ))}
+                                </div>
                             </div>
                         </div>
-
-                        <div className={styles.card}>
-                            <div className={styles.icon}>
-                                <a href='https://github.com/ThiagoS1lva/wordCloud-TwitterAPI/tree/main' target='blank'><BsGithub size={35} /></a>
-                            </div>
-                            <div className={styles.text}>
-                                <h2>WordCloud Twitter API</h2>
-                                <a href='https://github.com/ThiagoS1lva/wordCloud-TwitterAPI/tree/main' target='blank'><img src='/Cloud.png' alt='WordCloud Copa do mundo 2022'/></a>
-                                <p>Este código em Python utiliza a biblioteca Pandas para carregar e manipular dados de um arquivo CSV. Ele realiza algumas operações básicas de análise de dados, como exibição de informações estatísticas e gráficos.</p>
-                            </div>
-                            <div className={styles.language}>
-                                <p>Python</p>
-                                <p>Tweepy</p>
-                                <p>Pandas</p>
-                                <p>NumPy</p>
-                                <p>Matplotlib</p>
-                                <p>WordCloud</p>
-                                
-                            </div>
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </div>
         </div>
