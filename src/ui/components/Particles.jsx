@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react'
-import styles from '../styles/Particles.module.css'
 
 export default function Particles() {
     const canvasRef = useRef(null)
@@ -25,12 +24,12 @@ export default function Particles() {
         let animationId
 
         const particles = []
-        const particleCount = 60
+        const particleCount = 80 // Aumentado para ser "mais presente"
 
         const colors = [
-            'rgba(99, 102, 241, 0.5)',
-            'rgba(236, 72, 153, 0.4)',
-            'rgba(6, 182, 212, 0.4)',
+            'rgba(99, 102, 241, 0.4)', // Indigo
+            'rgba(52, 211, 153, 0.3)', // Emerald
+            'rgba(56, 189, 248, 0.3)', // Sky
         ]
 
         class Particle {
@@ -41,11 +40,10 @@ export default function Particles() {
             reset() {
                 this.x = Math.random() * dimensions.width
                 this.y = Math.random() * dimensions.height
-                this.size = Math.random() * 2 + 0.5
-                this.speedX = (Math.random() - 0.5) * 0.5
-                this.speedY = (Math.random() - 0.5) * 0.5
+                this.size = Math.random() * 3 + 1 // Tamanho ligeiramente maior
+                this.speedX = (Math.random() - 0.5) * 0.3
+                this.speedY = (Math.random() - 0.5) * 0.3
                 this.color = colors[Math.floor(Math.random() * colors.length)]
-                this.opacity = Math.random() * 0.5 + 0.2
             }
 
             update() {
@@ -61,6 +59,10 @@ export default function Particles() {
                 ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2)
                 ctx.fillStyle = this.color
                 ctx.fill()
+
+                // Brilho suave nas partículas
+                ctx.shadowBlur = 10
+                ctx.shadowColor = this.color
             }
         }
 
@@ -75,10 +77,10 @@ export default function Particles() {
                     const dy = particles[i].y - particles[j].y
                     const distance = Math.sqrt(dx * dx + dy * dy)
 
-                    if (distance < 120) {
-                        const opacity = (1 - distance / 120) * 0.15
+                    if (distance < 150) { // Distância de conexão aumentada
+                        const opacity = (1 - distance / 150) * 0.1
                         ctx.beginPath()
-                        ctx.strokeStyle = `rgba(99, 102, 241, ${opacity})`
+                        ctx.strokeStyle = `rgba(148, 163, 184, ${opacity})`
                         ctx.lineWidth = 0.5
                         ctx.moveTo(particles[i].x, particles[i].y)
                         ctx.lineTo(particles[j].x, particles[j].y)
@@ -90,6 +92,10 @@ export default function Particles() {
 
         function animate() {
             ctx.clearRect(0, 0, dimensions.width, dimensions.height)
+
+            // Fundo levemente iluminado por gradientes radiais (simulado)
+            // ctx.fillStyle = 'rgba(15, 23, 42, 0.1)'
+            // ctx.fillRect(0, 0, dimensions.width, dimensions.height)
 
             particles.forEach(particle => {
                 particle.update()
@@ -110,7 +116,7 @@ export default function Particles() {
     return (
         <canvas
             ref={canvasRef}
-            className={styles.canvas}
+            className="fixed inset-0 pointer-events-none z-0"
             width={dimensions.width}
             height={dimensions.height}
         />

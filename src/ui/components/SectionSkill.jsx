@@ -1,46 +1,63 @@
-import styles from '../styles/SectionSkill.module.css'
 import { FaPalette, FaServer, FaTools } from 'react-icons/fa'
 
 export default function SectionSkill() {
     const skills = [
         {
             title: "Front-end",
-            icon: <FaPalette size={22} />,
-            items: ["HTML5", "CSS3", "JavaScript", "React.js", "Vue.js"]
+            icon: <FaPalette size={24} />,
+            color: "from-pink-500 to-rose-500",
+            items: ["HTML5", "CSS3", "JavaScript", "React.js", "Vue.js", "Tailwind CSS"]
         },
         {
             title: "Back-end",
-            icon: <FaServer size={22} />,
-            items: ["Python", "C", "C# (.NET)"]
+            icon: <FaServer size={24} />,
+            color: "from-indigo-500 to-blue-500",
+            items: ["Python", "C# (.NET)", "Node.js", "SQL Server", "Supabase"]
         },
         {
-            title: "Outros",
-            icon: <FaTools size={22} />,
-            items: ["Lógica de Programação", "APIs REST", "Git & GitHub"]
+            title: "Ferramentas",
+            icon: <FaTools size={24} />,
+            color: "from-emerald-500 to-teal-500",
+            items: ["Git & GitHub", "APIs REST", "Figma", "Docker", "Vercel"]
         }
     ]
 
     return (
-        <div className={styles.dad}>
-            <div className={styles.container}>
-                <h1 className="animate-on-scroll">{`<Skills />`}</h1>
-                <p className={`${styles.subtitle} animate-on-scroll delay-1`}>
-                    Tecnologias e ferramentas que utilizo no dia a dia
-                </p>
+        <section className="py-24 px-6 bg-slate-950">
+            <div className="max-w-7xl mx-auto">
+                <div className="text-center mb-16">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gradient">
+                        {`<Skills />`}
+                    </h2>
+                    <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+                        Tecnologias e ferramentas que domino para criar soluções completas e escaláveis.
+                    </p>
+                </div>
 
-                <div className={styles.skillsGrid}>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {skills.map((category, index) => (
                         <div
                             key={index}
-                            className={`${styles.skillCategory} animate-on-scroll delay-${index + 2}`}
+                            className="glass-card p-8 group relative overflow-hidden"
                         >
-                            <div className={styles.categoryTitle}>
-                                <span className={styles.categoryIcon}>{category.icon}</span>
-                                <h3>{category.title}</h3>
+                            {/* Brilho no topo do card */}
+                            <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${category.color} opacity-50`}></div>
+
+                            <div className="flex items-center gap-4 mb-6">
+                                <div className={`p-3 rounded-xl bg-gradient-to-br ${category.color} bg-opacity-10 text-white shadow-lg`}>
+                                    {category.icon}
+                                </div>
+                                <h3 className="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors">
+                                    {category.title}
+                                </h3>
                             </div>
-                            <div className={styles.skillsList}>
+
+                            <div className="flex flex-wrap gap-3">
                                 {category.items.map((skill, skillIndex) => (
-                                    <span key={skillIndex} className={styles.skillTag}>
+                                    <span
+                                        key={skillIndex}
+                                        className="px-3 py-1.5 text-xs font-medium bg-white/5 border border-white/10 rounded-lg text-slate-300 hover:border-white/30 hover:bg-white/10 transition-all duration-300"
+                                    >
                                         {skill}
                                     </span>
                                 ))}
@@ -49,6 +66,6 @@ export default function SectionSkill() {
                     ))}
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
