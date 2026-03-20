@@ -7,6 +7,7 @@ function Contexts ({ children  }) {
     const sectionSobreRef = useRef(null);
     const sectionProjetoRef = useRef(null);
     const sectionCarreiraRef = useRef(null);
+    const sectionAcademyRef = useRef(null);
     const sectionContatoRef = useRef(null);
     const buttonHome = () => {
         sectionHomeRef.current.scrollIntoView({behavior: 'smooth'})
@@ -20,6 +21,9 @@ function Contexts ({ children  }) {
     const buttonCarreira = () => {
         sectionCarreiraRef.current.scrollIntoView({behavior: 'smooth'})
     }
+    const buttonAcademy = () => {
+        sectionAcademyRef.current.scrollIntoView({behavior: 'smooth'})
+    }
     const buttonContato = () => {
         sectionContatoRef.current.scrollIntoView({behavior: 'smooth'})
     }
@@ -31,6 +35,7 @@ function Contexts ({ children  }) {
             buttonSobre, sectionSobreRef,
             buttonProjeto, sectionProjetoRef,
             buttonCarreira, sectionCarreiraRef,
+            buttonAcademy, sectionAcademyRef,
             buttonContato, sectionContatoRef
             }}>
             {children}

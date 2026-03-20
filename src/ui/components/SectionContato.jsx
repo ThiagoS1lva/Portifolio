@@ -31,7 +31,7 @@ export default function SectionContato() {
                 'service_portfolio',
                 'template_contact',
                 formRef.current,
-                'YOUR_PUBLIC_KEY'
+                import.meta.env.VITE_EMAILJS_PUBLIC_KEY
             )
             setStatus('success')
             setFormData({ name: '', email: '', message: '' })
@@ -42,26 +42,26 @@ export default function SectionContato() {
     }
 
     return (
-        <section ref={sectionContatoRef} className="py-24 px-6 bg-slate-950 relative overflow-hidden">
+        <section ref={sectionContatoRef} className="py-24 px-6 bg-slate-50 dark:bg-slate-950 relative overflow-hidden">
             <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-start">
 
                 <div className="lg:w-1/2">
                     <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gradient">
                         {`<Contato />`}
                     </h2>
-                    <p className="text-slate-400 text-lg mb-8 leading-relaxed max-w-xl">
+                    <p className="text-slate-500 dark:text-slate-400 text-lg mb-8 leading-relaxed max-w-xl">
                         Vamos construir algo incrível juntos? Se você tem uma ideia, um projeto ou apenas quer dar um oi,
                         preencha o formulário ou entre em contato pelos canais diretos.
                     </p>
 
                     <div className="space-y-6">
                         <div className="glass-card p-6 flex items-center gap-6 group hover:border-emerald-500/30 transition-all">
-                            <div className="w-12 h-12 bg-emerald-500/10 rounded-full flex items-center justify-center text-emerald-400">
+                            <div className="w-12 h-12 bg-emerald-500/10 rounded-full flex items-center justify-center text-emerald-500 dark:text-emerald-400">
                                 <HiOutlineMail size={24} />
                             </div>
                             <div>
-                                <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">E-mail</p>
-                                <a href="mailto:thiagooliveira745@gmail.com" className="text-lg text-white hover:text-emerald-400 transition-colors">
+                                <p className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest">E-mail</p>
+                                <a href="mailto:thiagooliveira745@gmail.com" className="text-lg text-slate-900 dark:text-white hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors">
                                     thiagooliveira745@gmail.com
                                 </a>
                             </div>
@@ -73,12 +73,12 @@ export default function SectionContato() {
                             rel="noreferrer"
                             className="glass-card p-6 flex items-center gap-6 group hover:border-indigo-500/30 transition-all"
                         >
-                            <div className="w-12 h-12 bg-indigo-500/10 rounded-full flex items-center justify-center text-indigo-400">
+                            <div className="w-12 h-12 bg-indigo-500/10 rounded-full flex items-center justify-center text-indigo-500 dark:text-indigo-400">
                                 <HiOutlineChatAlt2 size={24} />
                             </div>
                             <div>
-                                <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">WhatsApp</p>
-                                <p className="text-lg text-white group-hover:text-indigo-400 transition-colors">
+                                <p className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest">WhatsApp</p>
+                                <p className="text-lg text-slate-900 dark:text-white group-hover:text-indigo-500 dark:group-hover:text-indigo-400 transition-colors">
                                     +55 22 99105-5011
                                 </p>
                             </div>
@@ -93,7 +93,7 @@ export default function SectionContato() {
                         className="glass-card p-8 md:p-10 space-y-6 relative"
                     >
                         <div className="space-y-2">
-                            <label className="text-sm font-semibold text-slate-400 flex items-center gap-2">
+                            <label className="text-sm font-semibold text-slate-500 dark:text-slate-400 flex items-center gap-2">
                                 <HiOutlineUser size={16} /> Seu Nome
                             </label>
                             <input
@@ -102,13 +102,13 @@ export default function SectionContato() {
                                 value={formData.name}
                                 onChange={handleChange}
                                 placeholder="Como devo te chamar?"
-                                className="w-full bg-slate-900/50 border border-white/10 rounded-xl px-4 py-4 text-white placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all"
+                                className="w-full bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-4 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all"
                                 required
                             />
                         </div>
 
                         <div className="space-y-2">
-                            <label className="text-sm font-semibold text-slate-400 flex items-center gap-2">
+                            <label className="text-sm font-semibold text-slate-500 dark:text-slate-400 flex items-center gap-2">
                                 <HiOutlineMail size={16} /> Seu E-mail
                             </label>
                             <input
@@ -117,13 +117,13 @@ export default function SectionContato() {
                                 value={formData.email}
                                 onChange={handleChange}
                                 placeholder="exemplo@email.com"
-                                className="w-full bg-slate-900/50 border border-white/10 rounded-xl px-4 py-4 text-white placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all"
+                                className="w-full bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-4 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all"
                                 required
                             />
                         </div>
 
                         <div className="space-y-2">
-                            <label className="text-sm font-semibold text-slate-400 flex items-center gap-2">
+                            <label className="text-sm font-semibold text-slate-500 dark:text-slate-400 flex items-center gap-2">
                                 <HiOutlineChatAlt2 size={16} /> Sua Mensagem
                             </label>
                             <textarea
@@ -132,7 +132,7 @@ export default function SectionContato() {
                                 onChange={handleChange}
                                 placeholder="Conte mais sobre o projeto..."
                                 rows={5}
-                                className="w-full bg-slate-900/50 border border-white/10 rounded-xl px-4 py-4 text-white placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all resize-none"
+                                className="w-full bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-4 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all resize-none"
                                 required
                             />
                         </div>
@@ -156,12 +156,12 @@ export default function SectionContato() {
                         </button>
 
                         {status === 'success' && (
-                            <div className="p-4 bg-emerald-500/10 border border-emerald-500/20 rounded-xl text-emerald-400 text-center font-medium animate-in fade-in zoom-in duration-300">
+                            <div className="p-4 bg-emerald-500/10 border border-emerald-500/20 rounded-xl text-emerald-500 dark:text-emerald-400 text-center font-medium animate-in fade-in zoom-in duration-300">
                                 Mensagem enviada com sucesso!
                             </div>
                         )}
                         {status === 'error' && (
-                            <div className="p-4 bg-rose-500/10 border border-rose-500/20 rounded-xl text-rose-400 text-center font-medium animate-in fade-in zoom-in duration-300">
+                            <div className="p-4 bg-rose-500/10 border border-rose-500/20 rounded-xl text-rose-500 dark:text-rose-400 text-center font-medium animate-in fade-in zoom-in duration-300">
                                 Erro ao enviar. Tente novamente ou use o WhatsApp.
                             </div>
                         )}

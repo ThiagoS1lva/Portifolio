@@ -4,7 +4,7 @@
 
 @layer base {
     body {
-        @apply bg-slate-950 text-slate-200 antialiased;
+        @apply bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-200 antialiased;
         font-family: 'Outfit', sans-serif;
     }
 
@@ -14,7 +14,7 @@
     }
 
     ::-webkit-scrollbar-track {
-        @apply bg-slate-950;
+        @apply bg-white dark:bg-slate-950;
     }
 
     ::-webkit-scrollbar-thumb {
@@ -22,21 +22,43 @@
     }
 
     ::selection {
-        @apply bg-indigo-500/30 text-white;
+        @apply bg-indigo-500/30 text-slate-900 dark:text-white;
+    }
+
+    .scrollbar-terminal::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    .scrollbar-terminal::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .scrollbar-terminal::-webkit-scrollbar-thumb {
+        background: rgba(34, 197, 94, 0.3);
+        border-radius: 9999px;
+    }
+
+    .dark .scrollbar-terminal::-webkit-scrollbar-thumb {
+        background: rgba(34, 197, 94, 0.2);
     }
 }
 
 @layer components {
     .glass-card {
-        @apply bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl transition-all duration-300;
+        @apply bg-slate-100/80 dark:bg-white/5 backdrop-blur-lg border border-slate-200 dark:border-white/10 rounded-2xl transition-all duration-300;
     }
 
     .glass-card:hover {
-        @apply bg-white/10 border-white/20 shadow-2xl shadow-indigo-500/10 -translate-y-1;
+        @apply bg-slate-200/80 dark:bg-white/10 border-slate-300 dark:border-white/20 shadow-2xl shadow-indigo-500/10 -translate-y-1;
     }
 
     .text-gradient {
-        @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-emerald-400 to-sky-400;
+        @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-emerald-500 to-sky-500 dark:from-indigo-400 dark:via-emerald-400 dark:to-sky-400;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+        padding-bottom: 0.1em;
     }
 
     @keyframes float {
@@ -53,6 +75,11 @@
 
     .animate-float {
         animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
     }
 }
 

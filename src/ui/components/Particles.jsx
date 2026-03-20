@@ -1,8 +1,10 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, useContext } from 'react'
+import { ThemeContext } from '../../contexts/ThemeContext'
 
 export default function Particles() {
     const canvasRef = useRef(null)
     const [dimensions, setDimensions] = useState({ width: 0, height: 0 })
+    const { dark } = useContext(ThemeContext)
 
     useEffect(() => {
         const updateDimensions = () => {
@@ -24,13 +26,22 @@ export default function Particles() {
         let animationId
 
         const particles = []
-        const particleCount = 80 // Aumentado para ser "mais presente"
+        const particleCount = 80
 
-        const colors = [
-            'rgba(99, 102, 241, 0.4)', // Indigo
-            'rgba(52, 211, 153, 0.3)', // Emerald
-            'rgba(56, 189, 248, 0.3)', // Sky
+        const darkColors = [
+            'rgba(99, 102, 241, 0.4)',
+            'rgba(52, 211, 153, 0.3)',
+            'rgba(56, 189, 248, 0.3)',
         ]
+
+        const lightColors = [
+            'rgba(99, 102, 241, 0.25)',
+            'rgba(16, 185, 129, 0.2)',
+            'rgba(14, 165, 233, 0.2)',
+        ]
+
+        const colors = dark ? darkColors : lightColors
+        const lineColor = dark ? 'rgba(148, 163, 184,' : 'rgba(100, 116, 139,'
 
         class Particle {
             constructor() {
@@ -40,7 +51,7 @@ export default function Particles() {
             reset() {
                 this.x = Math.random() * dimensions.width
                 this.y = Math.random() * dimensions.height
-                this.size = Math.random() * 3 + 1 // Tamanho ligeiramente maior
+                this.size = Math.random() * 3 + 1
                 this.speedX = (Math.random() - 0.5) * 0.3
                 this.speedY = (Math.random() - 0.5) * 0.3
                 this.color = colors[Math.floor(Math.random() * colors.length)]
@@ -60,7 +71,6 @@ export default function Particles() {
                 ctx.fillStyle = this.color
                 ctx.fill()
 
-                // Brilho suave nas partículas
                 ctx.shadowBlur = 10
                 ctx.shadowColor = this.color
             }
@@ -77,12 +87,12 @@ export default function Particles() {
                     const dy = particles[i].y - particles[j].y
                     const distance = Math.sqrt(dx * dx + dy * dy)
 
-                    if (distance < 150) { // Distância de conexão aumentada
+                    if (distance < 150) {
                         const opacity = (1 - distance / 150) * 0.1
                         ctx.beginPath()
-                        ctx.strokeStyle = `rgba(148, 163, 184, ${opacity})`
+                        ctx.strokeStyle = `${lineColor} ${opacity})`
                         ctx.lineWidth = 0.5
-                        ctx.moveTo(particles[i].x, particles[i].y)
+                        ctx.moveTo(particles[i].x, particles[j].y)
                         ctx.lineTo(particles[j].x, particles[j].y)
                         ctx.stroke()
                     }
@@ -92,10 +102,6 @@ export default function Particles() {
 
         function animate() {
             ctx.clearRect(0, 0, dimensions.width, dimensions.height)
-
-            // Fundo levemente iluminado por gradientes radiais (simulado)
-            // ctx.fillStyle = 'rgba(15, 23, 42, 0.1)'
-            // ctx.fillRect(0, 0, dimensions.width, dimensions.height)
 
             particles.forEach(particle => {
                 particle.update()
@@ -111,7 +117,7 @@ export default function Particles() {
         return () => {
             cancelAnimationFrame(animationId)
         }
-    }, [dimensions])
+    }, [dimensions, dark])
 
     return (
         <canvas
