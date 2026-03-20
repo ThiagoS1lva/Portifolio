@@ -18,7 +18,7 @@
     }
 
     ::-webkit-scrollbar-thumb {
-        @apply bg-gradient-to-b from-indigo-500 to-emerald-500 rounded-full;
+        @apply bg-indigo-500/40 dark:bg-indigo-500/30 rounded-full;
     }
 
     ::selection {
@@ -49,16 +49,11 @@
     }
 
     .glass-card:hover {
-        @apply bg-slate-200/80 dark:bg-white/10 border-slate-300 dark:border-white/20 shadow-2xl shadow-indigo-500/10 -translate-y-1;
+        @apply bg-slate-200/80 dark:bg-white/10 border-slate-300 dark:border-white/20;
     }
 
     .text-gradient {
-        @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-emerald-500 to-sky-500 dark:from-indigo-400 dark:via-emerald-400 dark:to-sky-400;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        box-decoration-break: clone;
-        -webkit-box-decoration-break: clone;
-        padding-bottom: 0.1em;
+        @apply text-indigo-600 dark:text-indigo-400;
     }
 
     @keyframes float {

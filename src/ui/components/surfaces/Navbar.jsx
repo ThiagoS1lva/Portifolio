@@ -35,7 +35,6 @@ export default function Navbar() {
                 }`}>
                 <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
                     <div className="relative group">
-                        <div className="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-emerald-500 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
                         <p
                             className="relative text-xl font-bold text-slate-900 dark:text-white cursor-pointer"
                             onClick={() => handleNavClick(buttonHome, sectionHomeRef)}
@@ -55,7 +54,7 @@ export default function Navbar() {
                                     onClick={() => link.action(link.ref)}
                                 >
                                     {link.name}
-                                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-emerald-500 transition-all duration-300 group-hover:w-full"></span>
+                                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-indigo-500 dark:bg-indigo-400 transition-all duration-300 group-hover:w-full"></span>
                                 </li>
                             ))}
                         </ul>

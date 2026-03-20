@@ -56,10 +56,6 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-
-            {/* Brilhos decorativos */}
-            <div className="absolute top-0 right-1/4 w-64 h-64 bg-emerald-500/5 blur-[100px] rounded-full"></div>
-            <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-indigo-500/5 blur-[100px] rounded-full"></div>
         </footer>
     )
 }
