@@ -1,4 +1,5 @@
-import { useState, useRef, useEffect, useCallback } from 'react'
+import { useState, useRef, useEffect, useCallback, useContext } from 'react'
+import { Context } from '../../contexts/Contexts'
 
 const COMMANDS = {
     help: () => [
@@ -129,6 +130,7 @@ const MOTD = [
 ]
 
 export default function Terminal() {
+    const { buttonSobre, buttonProjeto, buttonCarreira, buttonAcademy, buttonContato } = useContext(Context)
     const [lines, setLines] = useState(MOTD.map(text => ({ type: 'output', text })))
     const [input, setInput] = useState('')
     const [history, setHistory] = useState([])
@@ -171,6 +173,35 @@ export default function Terminal() {
             setHistory(prev => [trimmed, ...prev])
             setHistoryIndex(-1)
             return
+        }
+
+        const scrollCommands = {
+            whoami: {
+                action: buttonSobre,
+                text: 'Indo para Sobre...',
+            },
+            projects: {
+                action: buttonProjeto,
+                text: 'Indo para Projetos...',
+            },
+            experience: {
+                action: buttonCarreira,
+                text: 'Indo para Carreira...',
+            },
+            education: {
+                action: buttonAcademy,
+                text: 'Indo para Academica...',
+            },
+            contact: {
+                action: buttonContato,
+                text: 'Indo para Contato...',
+            },
+        }
+
+        const scrollCommand = scrollCommands[trimmed]
+        if (scrollCommand) {
+            scrollCommand.action()
+            newLines.push({ type: 'output', text: scrollCommand.text })
         }
 
         const command = COMMANDS[trimmed]
