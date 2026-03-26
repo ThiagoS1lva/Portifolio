@@ -56,14 +56,6 @@ export default function Home() {
                                 loading="eager"
                             />
                         </div>
-
-                        {/* Mini Badge Flutuante */}
-                        <div className="absolute -bottom-4 -right-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 p-4 rounded-2xl shadow-xl backdrop-blur-md animate-float">
-                            <div className="flex items-center gap-3">
-                                <div className="w-3 h-3 bg-emerald-500 rounded-full animate-pulse"></div>
-                                <span className="text-sm font-bold text-slate-900 dark:text-white leading-none">Open to Work</span>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
