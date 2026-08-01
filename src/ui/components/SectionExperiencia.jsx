@@ -35,7 +35,9 @@ export default function SectionExperiencia() {
                                     <h3 className="text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-500 dark:group-hover:text-indigo-400 transition-colors">
                                         {exp.cargo}
                                     </h3>
-                                    <span className="text-emerald-500 dark:text-emerald-400 font-medium">{exp.empresa}</span>
+                                    <span className="text-emerald-500 dark:text-emerald-400 font-medium">
+                                        {exp.empresa}{exp.tipo && ` · ${exp.tipo}`}
+                                    </span>
                                 </div>
 
                                 <div className="flex flex-wrap gap-4 text-sm text-slate-500 dark:text-slate-400 mb-4">

@@ -1,8 +1,19 @@
 export const experiencias = [
     {
-        cargo: "Estagiário de Inteligência de Mercado",
+        cargo: "Estagiário em análise de sistemas",
+        empresa: "IKM Subsea Brasil",
+        tipo: "Estágio",
+        periodo: "Jul 2026 - Presente",
+        local: "Rio de Janeiro, RJ",
+        modalidade: "Híbrido",
+        descricao: "Atuação em análise de sistemas na IKM Subsea Brasil.",
+        competencias: ["Análise de Sistemas"]
+    },
+    {
+        cargo: "Estagiário de Inteligência de Mercado e Desenvolvimento de Ferramentas",
         empresa: "WEB Nordeste LTDA",
-        periodo: "Set 2025 - Presente",
+        tipo: "Estágio",
+        periodo: "Set 2025 - Jul 2026",
         local: "Rio de Janeiro, RJ",
         modalidade: "Híbrido",
         descricao: "Desenvolvimento de ferramentas e análise de dados para inteligência de mercado.",
