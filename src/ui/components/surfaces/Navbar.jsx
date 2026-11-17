@@ -45,7 +45,7 @@ export default function Navbar() {
 
                     {/* Desktop Menu */}
                     <div className="hidden md:flex items-center gap-4">
-                        <ul className={`flex items-center gap-8 py-2 px-6 rounded-full transition-all duration-300 ${scrolled ? 'bg-slate-100/80 dark:bg-slate-900/80 backdrop-blur-md border border-slate-200 dark:border-white/10 shadow-lg' : ''
+                        <ul className={`flex items-center gap-8 py-2 px-6 rounded-full transition-all duration-300 ${scrolled ? 'bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800' : ''
                             }`}>
                             {navLinks.map((link) => (
                                 <li
@@ -75,7 +75,7 @@ export default function Navbar() {
             </nav>
 
             {/* Mobile Menu Overlay */}
-            <div className={`fixed inset-0 z-[60] bg-slate-950/90 dark:bg-white/90 backdrop-blur-xl transition-all duration-500 md:hidden ${menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+            <div className={`fixed inset-0 z-[60] bg-slate-950 dark:bg-white transition-all duration-500 md:hidden ${menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
                 }`}>
                 <button
                     className="absolute top-6 right-6 p-2 text-slate-300 dark:text-slate-700 hover:text-white dark:hover:text-slate-900"

@@ -10,18 +10,18 @@ export default function Footer() {
                 <div className="text-center md:text-left">
                     <p className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Thiago Oliveira</p>
                     <p className="text-slate-400 dark:text-slate-500 text-sm">
-                        © {currentYear} • Desenvolvido com foco em excelência digital.
+                        © {currentYear}
                     </p>
                 </div>
 
                 <div className="flex flex-col items-center md:items-end gap-4">
-                    <p className="text-slate-600 dark:text-slate-300 font-medium text-sm uppercase tracking-widest">Conecte-se comigo</p>
+                    <p className="text-slate-600 dark:text-slate-300 font-medium text-sm">Redes e contato</p>
                     <div className="flex gap-6">
                         <a
                             href='https://www.linkedin.com/in/thiago-oliveira-49952823a/'
                             target='_blank'
                             rel='noreferrer'
-                            className="text-slate-400 hover:text-indigo-500 dark:hover:text-indigo-400 transition-colors duration-300"
+                            className="text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300"
                             aria-label="LinkedIn"
                         >
                             <BsLinkedin size={24} />
@@ -39,7 +39,7 @@ export default function Footer() {
                             href='https://www.instagram.com/diskthi/'
                             target='_blank'
                             rel='noreferrer'
-                            className="text-slate-400 hover:text-pink-500 dark:hover:text-pink-400 transition-colors duration-300"
+                            className="text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300"
                             aria-label="Instagram"
                         >
                             <BsInstagram size={24} />
@@ -48,7 +48,7 @@ export default function Footer() {
                             href='https://api.whatsapp.com/send?phone=5522991055011&text=Ol%C3%A1,%20Thiago!%20Vim%20pelo%20seu%20site!'
                             target='_blank'
                             rel='noreferrer'
-                            className="text-slate-400 hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors duration-300"
+                            className="text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300"
                             aria-label="WhatsApp"
                         >
                             <ImWhatsapp size={24} />

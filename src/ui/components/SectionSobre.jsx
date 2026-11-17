@@ -14,7 +14,7 @@ export default function SectionSobre() {
                     <div className="h-0.5 w-12 bg-indigo-500/30 dark:bg-indigo-400/30 mx-auto rounded-full"></div>
                 </div>
 
-                <div className="glass-card p-8 md:p-12 space-y-8">
+                <div className="card p-8 md:p-12 space-y-8">
                     <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 leading-relaxed font-light">
                         Sou técnico em <span className="text-slate-900 dark:text-white font-medium">Petróleo e Gás</span> pelo IFF e atualmente graduando em <span className="text-slate-900 dark:text-white font-medium">Ciência da Computação</span> pela UERJ. Minha jornada na tecnologia é movida pela curiosidade de entender como sistemas complexos funcionam e pela paixão de construir experiências web excepcionais.
                     </p>

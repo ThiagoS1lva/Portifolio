@@ -28,19 +28,7 @@ export default function Particles() {
         const particles = []
         const particleCount = 80
 
-        const darkColors = [
-            'rgba(99, 102, 241, 0.4)',
-            'rgba(52, 211, 153, 0.3)',
-            'rgba(56, 189, 248, 0.3)',
-        ]
-
-        const lightColors = [
-            'rgba(99, 102, 241, 0.25)',
-            'rgba(16, 185, 129, 0.2)',
-            'rgba(14, 165, 233, 0.2)',
-        ]
-
-        const colors = dark ? darkColors : lightColors
+        const particleColor = dark ? 'rgba(148, 163, 184, 0.25)' : 'rgba(100, 116, 139, 0.2)'
         const lineColor = dark ? 'rgba(148, 163, 184,' : 'rgba(100, 116, 139,'
 
         class Particle {
@@ -51,10 +39,10 @@ export default function Particles() {
             reset() {
                 this.x = Math.random() * dimensions.width
                 this.y = Math.random() * dimensions.height
-                this.size = Math.random() * 3 + 1
+                this.size = Math.random() * 1.5 + 0.5
                 this.speedX = (Math.random() - 0.5) * 0.3
                 this.speedY = (Math.random() - 0.5) * 0.3
-                this.color = colors[Math.floor(Math.random() * colors.length)]
+                this.color = particleColor
             }
 
             update() {
@@ -70,9 +58,6 @@ export default function Particles() {
                 ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2)
                 ctx.fillStyle = this.color
                 ctx.fill()
-
-                ctx.shadowBlur = 10
-                ctx.shadowColor = this.color
             }
         }
 
@@ -92,7 +77,7 @@ export default function Particles() {
                         ctx.beginPath()
                         ctx.strokeStyle = `${lineColor} ${opacity})`
                         ctx.lineWidth = 0.5
-                        ctx.moveTo(particles[i].x, particles[j].y)
+                        ctx.moveTo(particles[i].x, particles[i].y)
                         ctx.lineTo(particles[j].x, particles[j].y)
                         ctx.stroke()
                     }

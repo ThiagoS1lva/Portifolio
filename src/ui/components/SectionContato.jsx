@@ -55,13 +55,11 @@ export default function SectionContato() {
                     </p>
 
                     <div className="space-y-6">
-                        <div className="glass-card p-6 flex items-center gap-6 group hover:border-emerald-500/30 transition-all">
-                            <div className="w-12 h-12 bg-emerald-500/10 rounded-full flex items-center justify-center text-emerald-500 dark:text-emerald-400">
-                                <HiOutlineMail size={24} />
-                            </div>
+                        <div className="card p-6 flex items-center gap-4">
+                            <HiOutlineMail size={20} className="text-slate-400 dark:text-slate-500 shrink-0" />
                             <div>
-                                <p className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest">E-mail</p>
-                                <a href="mailto:thiagooliveira745@gmail.com" className="text-lg text-slate-900 dark:text-white hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors">
+                                <p className="text-sm text-slate-500 dark:text-slate-400">E-mail</p>
+                                <a href="mailto:thiagooliveira745@gmail.com" className="text-lg text-slate-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
                                     thiagooliveira745@gmail.com
                                 </a>
                             </div>
@@ -71,14 +69,12 @@ export default function SectionContato() {
                             href="https://api.whatsapp.com/send?phone=5522991055011&text=Ol%C3%A1,%20Thiago!%20Vim%20pelo%20seu%20site!"
                             target="_blank"
                             rel="noreferrer"
-                            className="glass-card p-6 flex items-center gap-6 group hover:border-indigo-500/30 transition-all"
+                            className="card p-6 flex items-center gap-4 group"
                         >
-                            <div className="w-12 h-12 bg-indigo-500/10 rounded-full flex items-center justify-center text-indigo-500 dark:text-indigo-400">
-                                <HiOutlineChatAlt2 size={24} />
-                            </div>
+                            <HiOutlineChatAlt2 size={20} className="text-slate-400 dark:text-slate-500 shrink-0" />
                             <div>
-                                <p className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest">WhatsApp</p>
-                                <p className="text-lg text-slate-900 dark:text-white group-hover:text-indigo-500 dark:group-hover:text-indigo-400 transition-colors">
+                                <p className="text-sm text-slate-500 dark:text-slate-400">WhatsApp</p>
+                                <p className="text-lg text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
                                     +55 22 99105-5011
                                 </p>
                             </div>
@@ -90,7 +86,7 @@ export default function SectionContato() {
                     <form
                         ref={formRef}
                         onSubmit={handleSubmit}
-                        className="glass-card p-8 md:p-10 space-y-6 relative"
+                        className="card p-8 md:p-10 space-y-6 relative"
                     >
                         <div className="space-y-2">
                             <label className="text-sm font-semibold text-slate-500 dark:text-slate-400 flex items-center gap-2">

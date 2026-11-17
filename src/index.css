@@ -44,12 +44,12 @@
 }
 
 @layer components {
-    .glass-card {
-        @apply bg-slate-100/80 dark:bg-white/5 backdrop-blur-lg border border-slate-200 dark:border-white/10 rounded-2xl transition-all duration-300;
+    .card {
+        @apply bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl transition-colors duration-200;
     }
 
-    .glass-card:hover {
-        @apply bg-slate-200/80 dark:bg-white/10 border-slate-300 dark:border-white/20;
+    .card:hover {
+        @apply border-slate-300 dark:border-slate-700;
     }
 
     .text-gradient {

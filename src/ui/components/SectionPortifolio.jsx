@@ -23,22 +23,22 @@ export default function SectionPortifolio() {
                     {projetos.map((projeto, index) => (
                         <div
                             key={index}
-                            className="glass-card group overflow-hidden flex flex-col h-full"
+                            className="card group overflow-hidden flex flex-col h-full"
                         >
                             <div className="relative aspect-video overflow-hidden">
                                 <img
                                     src={projeto.image}
                                     alt={projeto.title}
-                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-white/80 dark:from-slate-950/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+                                <div className="absolute inset-0 bg-white/85 dark:bg-slate-950/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
                                     {projeto.github && (
-                                        <a href={projeto.github} target="_blank" rel="noreferrer" className="p-3 bg-white/10 dark:bg-white/10 backdrop-blur-md rounded-full hover:bg-white/20 transition-colors">
+                                        <a href={projeto.github} target="_blank" rel="noreferrer" className="p-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-full hover:border-slate-400 dark:hover:border-slate-500 transition-colors">
                                             <BsGithub size={24} className="text-slate-900 dark:text-white" />
                                         </a>
                                     )}
                                     {projeto.live && (
-                                        <a href={projeto.live} target="_blank" rel="noreferrer" className="p-3 bg-white/10 dark:bg-white/10 backdrop-blur-md rounded-full hover:bg-white/20 transition-colors">
+                                        <a href={projeto.live} target="_blank" rel="noreferrer" className="p-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-full hover:border-slate-400 dark:hover:border-slate-500 transition-colors">
                                             <RiShareBoxLine size={24} className="text-slate-900 dark:text-white" />
                                         </a>
                                     )}
@@ -56,7 +56,7 @@ export default function SectionPortifolio() {
                                     {projeto.techs.map((tech, techIndex) => (
                                         <span
                                             key={techIndex}
-                                            className="px-2 py-1 text-[10px] font-semibold uppercase tracking-wider bg-indigo-500/10 text-indigo-500 dark:text-indigo-400 border border-indigo-500/20 rounded"
+                                            className="px-2 py-1 text-xs font-medium bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 rounded text-slate-600 dark:text-slate-300"
                                         >
                                             {tech}
                                         </span>

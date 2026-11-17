@@ -2,9 +2,9 @@ import { FaPalette, FaServer, FaTools } from 'react-icons/fa'
 import { skills } from '../../data/skills'
 
 const icons = {
-    "Front-end": <FaPalette size={24} />,
-    "Back-end": <FaServer size={24} />,
-    "Ferramentas": <FaTools size={24} />,
+    "Front-end": <FaPalette size={18} />,
+    "Back-end": <FaServer size={18} />,
+    "Ferramentas": <FaTools size={18} />,
 }
 
 export default function SectionSkill() {
@@ -25,16 +25,13 @@ export default function SectionSkill() {
                     {skills.map((category, index) => (
                         <div
                             key={index}
-                            className="glass-card p-8 group relative overflow-hidden"
+                            className="card p-8"
                         >
-                            {/* Brilho no topo do card */}
-                            <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${category.color} opacity-50`}></div>
-
-                            <div className="flex items-center gap-4 mb-6">
-                                <div className={`p-3 rounded-xl bg-gradient-to-br ${category.color} bg-opacity-10 text-white shadow-lg`}>
+                            <div className="flex items-center gap-3 mb-6">
+                                <span className="text-slate-400 dark:text-slate-500">
                                     {icons[category.title]}
-                                </div>
-                                <h3 className="text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-500 dark:group-hover:text-indigo-400 transition-colors">
+                                </span>
+                                <h3 className="text-xl font-bold text-slate-900 dark:text-white">
                                     {category.title}
                                 </h3>
                             </div>
@@ -43,7 +40,7 @@ export default function SectionSkill() {
                                 {category.items.map((skill, skillIndex) => (
                                     <span
                                         key={skillIndex}
-                                        className="px-3 py-1.5 text-xs font-medium bg-slate-200/50 dark:bg-white/5 border border-slate-300 dark:border-white/10 rounded-lg text-slate-600 dark:text-slate-300 hover:border-slate-400 dark:hover:border-white/30 hover:bg-slate-300/50 dark:hover:bg-white/10 transition-all duration-300"
+                                        className="px-3 py-1.5 text-xs font-medium bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 rounded-md text-slate-600 dark:text-slate-300"
                                     >
                                         {skill}
                                     </span>

@@ -8,7 +8,7 @@ export default function SkeletonSection() {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {[1, 2, 3].map((i) => (
-                        <div key={i} className="glass-card p-8 animate-pulse">
+                        <div key={i} className="card p-8 animate-pulse">
                             <div className="w-12 h-12 bg-slate-200 dark:bg-white/5 rounded-xl mb-6"></div>
                             <div className="h-6 w-3/4 bg-slate-200 dark:bg-white/5 rounded-lg mb-4"></div>
                             <div className="h-4 w-1/2 bg-slate-200 dark:bg-white/5 rounded-lg mb-6"></div>
