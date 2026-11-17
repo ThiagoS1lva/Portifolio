@@ -13,9 +13,9 @@ export default function Home() {
         <section ref={sectionHomeRef} className="min-h-screen flex items-center justify-center pt-20 px-6">
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="order-2 lg:order-1 text-center lg:text-left">
-                    <div className="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wider text-indigo-500 dark:text-indigo-400 uppercase bg-indigo-500/10 border border-indigo-500/20 rounded-full animate-bounce">
+                    <p className="mb-6 text-sm font-medium text-slate-500 dark:text-slate-400">
                         Disponível para novos projetos
-                    </div>
+                    </p>
                     <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
                         Olá, meu nome é <br />
                         <span className="text-gradient">Thiago Oliveira</span>
@@ -47,8 +47,8 @@ export default function Home() {
                 </div>
 
                 <div className="order-1 lg:order-2 flex justify-center">
-                    <div className="relative group">
-                        <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-slate-200 dark:border-white/10 shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]">
+                    <div className="relative">
+                        <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border border-slate-200 dark:border-slate-800">
                             <img
                                 src={eu}
                                 alt="Thiago Oliveira"

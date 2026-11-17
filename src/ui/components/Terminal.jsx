@@ -254,7 +254,7 @@ export default function Terminal() {
             {/* Floating Terminal Button */}
             <button
                 onClick={() => setIsOpen(prev => !prev)}
-                className={`fixed bottom-8 left-8 z-50 p-4 rounded-xl bg-slate-900 dark:bg-slate-100 text-green-400 dark:text-green-600 shadow-2xl shadow-slate-900/30 dark:shadow-slate-300/30 transition-all duration-300 hover:scale-105 ${isOpen ? 'opacity-0 pointer-events-none scale-90' : 'opacity-100'
+                className={`fixed bottom-8 left-8 z-50 p-4 rounded-xl bg-slate-900 dark:bg-slate-100 text-green-400 dark:text-green-600 transition-all duration-300 hover:scale-105 ${isOpen ? 'opacity-0 pointer-events-none scale-90' : 'opacity-100'
                     }`}
                 aria-label="Abrir terminal"
             >
@@ -262,7 +262,7 @@ export default function Terminal() {
             </button>
 
             {/* Terminal Window */}
-            <div className={`fixed bottom-8 left-8 z-[60] w-[90vw] max-w-[600px] h-[450px] rounded-xl overflow-hidden shadow-2xl shadow-black/50 dark:shadow-black/80 transition-all duration-300 ${isOpen ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-4 scale-95 pointer-events-none'
+            <div className={`fixed bottom-8 left-8 z-[60] w-[90vw] max-w-[600px] h-[450px] rounded-xl overflow-hidden shadow-lg border border-slate-800 transition-all duration-300 ${isOpen ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-4 scale-95 pointer-events-none'
                 }`}>
                 {/* Title Bar */}
                 <div className="flex items-center gap-2 px-4 py-3 bg-slate-800 dark:bg-slate-200 border-b border-slate-700 dark:border-slate-300">
